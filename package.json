@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build:dev": "parcel build src/index.html",
-    "build:pages": "parcel build src/index.html --dist-dir docs/"
+    "build:pages": "parcel build src/index.html --dist-dir docs/ --public-url https://damian96.github.io/pure-bs-carousel-accordion/"
   },
   "keywords": [
     "bootstrap",

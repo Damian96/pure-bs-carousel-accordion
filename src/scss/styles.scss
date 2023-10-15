@@ -1,0 +1,97 @@
+@import "../../node_modules/bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+// scss-docs-start theme-colors-map
+$custom-colors: (
+  "orange": #ffa500,
+  "indigo": #4b0082,
+  "purple": #800080,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+// scss-docs-end theme-colors-map
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/carousel";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// .horizontal-accordion {}
+
+body {
+  height: 100vh;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-indicators {
+    transform: translateY(100%);
+  }
+  &-control {
+    &-prev {
+      transform: translateX(-100%);
+    }
+    &-next {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.card {
+  display: inline-block;
+  height: 180px;
+  padding: 0;
+  overflow: hidden;
+  align-items: center;
+  transition: width 0.2s;
+  border-radius: 3px;
+
+  &.expand {
+    width: 65%;
+  }
+  &.unset {
+    width: 16%;
+    color: black !important;
+    background-color: #ddd !important;
+  }
+  &.small {
+    width: 5%;
+    background-color: #ddd !important;
+
+    & > div {
+      opacity: 0;
+    }
+  }
+  &.unset > div > p {
+    opacity: 0;
+  }
+
+  &.expand > div {
+    transition-delay: 200ms;
+    opacity: 1;
+  }
+}

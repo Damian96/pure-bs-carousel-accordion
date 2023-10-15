@@ -1,19 +1,26 @@
 {
   "name": "pure-bs-horziontal-accordion",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A pure Bootstrap Carousel & Horizontal Accordion",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build:dev": "parcel build src/index.html",
+    "build:pages": "parcel build src/index.html --dist-dir docs/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "bootstrap",
+    "accordion",
+    "carousel",
+    "horizontal"
+  ],
+  "author": "Damianos Giankakis",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3"
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.16"
   }
 }
